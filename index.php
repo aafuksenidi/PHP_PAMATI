@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") { // for debugging SET TO GET!!!
             </div>
             <div class="formElmt">
                 <label for="skaits">Studentu skaits:</label>
-                <input type="number" id="skaits" name="skaits" value="<?= safe_txt_cut($skaits) ?>">
+                <input type="number" id="skaits" name="skaits" min="1" max="5" value="<?= safe_txt_cut($skaits) ?>">
                 <?php
                 if (isset($err_data["skaits"])):
                     echo "<b>" . $err_data["skaits"] . "</b>";
@@ -141,9 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") { // for debugging SET TO GET!!!
 
         echo  "</b><br></div>";
     }
-
     ?>
-
 </body>
 
 </html>

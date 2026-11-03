@@ -14,7 +14,7 @@ function print_err($err_data, $key)
 
 function cenaCount($pricePerPerson, $personCount)
 {
-    $discount = 0;
+    $discount = 0;  // ir uztaisīt CONST???
     if ($personCount >= 3 && $personCount <= 5) {
         $discount = 0.1;
     }

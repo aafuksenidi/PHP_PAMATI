@@ -17,6 +17,10 @@ h2 {
     text-align: center;
 }
 
+h1 {
+    display: none;
+}
+
 h2 {
     color: rgb(49, 49, 49);
 }
@@ -56,8 +60,13 @@ select:focus {
     background-color: white;
 }
 
+#sButton {
+    letter-spacing: 1em;
+}
+
 #sButton:hover {
     background-color: rgb(206, 84, 40);
+    letter-spacing: 0.5em;
 }
 
 .formElmt {
