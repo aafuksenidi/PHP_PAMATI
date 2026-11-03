@@ -108,11 +108,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") { // for debugging SET TO GET!!!
         </form>
     </div>
     <hr>
-    <!-- <?= var_dump($count); ?> -->
     <?php
-    if (!count($err_data) && isset($skaits)) {
-        echo '<h2>Piedavajums</h2>';
-        echo "Name: <b>";
+    if (!count($err_data) && isset($skaits) && $course !== "") {
+
+        echo '<h2>Piedavajums</h2> <div class=outputList>';
+
+        echo "Vards: <b>";
         echo safe_txt_cut($vards) . "</b><br>";
 
         echo "Email: <b>";
@@ -127,22 +128,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") { // for debugging SET TO GET!!!
         $price = cenaCount($kursi[$course][1], $skaits);
         echo "Cena par kursu: <b>";
         echo round($price[0], 2) . " EUR</b><br>";
-        if ($price[1] > 0) {    //neradit Atlaide ja atlaide ir 0
-            echo "Atlaide: <b>";
-            echo round($price[1], 2) . " EUR</b><br>";
+        // if ($price[1] > 0) {    //neradit Atlaide ja atlaide ir 0
+        echo "Atlaide: <b>";
+        echo round($price[1], 2) . " EUR</b><br>";
 
-            echo "Kopa par kursu: <b>";
-            echo round($price[2], 2) . " EUR</b><br>";
-        }
+        echo "Kopa par kursu: <b>";
+        echo round($price[2], 2) . " EUR</b><br>";
+        // }
 
         echo "Kopa par kursu ar PVN: <b>";
         echo round($price[2] * 1.21, 2) . " EUR</b><br>";
 
-
-
-
-
-        echo  "</b><br>";
+        echo  "</b><br></div>";
     }
 
     ?>
