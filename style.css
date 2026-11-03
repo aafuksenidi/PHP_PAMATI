@@ -8,6 +8,7 @@ body {
     width: 80%;
     max-width: 1200px;
     margin: auto;
+    background-color: rgb(247, 179, 155);
 
 }
 
@@ -16,12 +17,17 @@ h2 {
     text-align: center;
 }
 
+h2 {
+    color: rgb(49, 49, 49);
+}
+
 table {
     border: 2px solid;
     border-radius: 5px;
     max-width: 50%;
     margin: auto;
     margin-bottom: 3em;
+    background-color: coral;
 }
 
 td {
@@ -35,25 +41,23 @@ form {
     margin: auto;
 }
 
-input {
+input,
+select {
     display: block;
     max-width: 100%;
     padding: 0.5em;
     size: 20em;
+    background-color: coral;
 
 }
 
-.countInput lable {
-    padding-left: 30px;
+input:focus,
+select:focus {
+    background-color: white;
 }
 
-.countInput {
-    display: flex;
-    flex-direction: row;
-    max-width: 30%;
-
-    justify-content: space-between;
-    size: 20em;
+#sButton:hover {
+    background-color: rgb(206, 84, 40);
 }
 
 .formElmt {
@@ -63,5 +67,11 @@ input {
 }
 
 .outputList {
+    max-width: 500px;
+    border: solid 2px;
+    border-radius: 2em;
+    padding: 1em;
     font-size: large;
+    margin: auto;
+    text-align: left;
 }

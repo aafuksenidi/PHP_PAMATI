@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") { // for debugging SET TO GET!!!
         }
         ?>
     </table>
-
+    <hr>
     <h2>Lūdzu, aizpildiet formu</h2>
     <div>
         <form action="" method="POST">
@@ -103,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") { // for debugging SET TO GET!!!
                 ?>
             </div>
             <div class="formElmt">
-                <input type="submit" value="Submit">
+                <input type="submit" id="sButton" value="Uzzinat cenu">
             </div>
         </form>
     </div>
